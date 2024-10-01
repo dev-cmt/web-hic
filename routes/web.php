@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Response;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\GalleryController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,6 +92,30 @@ Route::middleware('auth')->group(function () {
     Route::resource('events', EventController::class);
     Route::get('/event-register/index', [EventController::class, 'eventRegisterIndex'])->name('event-register.index');
     Route::get('/event-register/{id}/show', [EventController::class, 'eventRegisterShow'])->name('event-register.show');
+
+    //-- GALLERY
+    Route::resource('gallery', GalleryController::class);
+    Route::delete('gallery-destroy/{id}',[GalleryController::class,'destroy'])->name('gallery.destroy');
+    Route::delete('gallery-deleteimage/{id}',[GalleryController::class,'deleteimage'])->name('gallery.deleteimage');
+    Route::delete('gallery-deletecover/{id}',[GalleryController::class,'deletecover'])->name('gallery.deletecover');
+
+    Route::get('/download/{id}', [GalleryController::class, 'downloadFile'])->name('gallery.download');
+    Route::get('/dowloads', [GalleryController::class, 'dowloads']);
+
+    Route::get('dashboard-gallery/all',[GalleryController::class,'bvGallery'])->name('dashboard-gallery.all');
+    Route::get('dashboard-gallery/{id}/show',[GalleryController::class,'bvGalleryImage'])->name('dashboard-gallery.images');
+    
+    //-- BLOG
+    Route::get('blog-news/index', [BlogController::class,'index'])->name('blog.index');
+    Route::get('blog-news/create', [BlogController::class,'create'])->name('blog.create');
+    Route::post('blog-news/store', [BlogController::class,'store'])->name('blog.store');
+    Route::patch('blog-news/edit', [BlogController::class,'edit'])->name('blog.edit');
+    Route::delete('blog-news/delete', [BlogController::class,'delete'])->name('blog.delete');
+    
+    //-- CONTACT
+    Route::get('contact-us/index', [ContactController::class,'contactIndex'])->name('contact-us.index');
+    Route::get('contact-us/{id}/reply', [ContactController::class,'contactReply'])->name('contact-us.reply');
+    Route::get('contact-us/{id}/delete', [ContactController::class,'contactDelete'])->name('contact-us.delete');
 
 });
 

@@ -21,7 +21,7 @@
                 <i class="mdi mdi-home menu-icon"></i>
             </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
                 aria-controls="ui-basic">
                 <span class="menu-title">Post</span>
@@ -30,10 +30,40 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="{{route('events.index')}}">Event List</a></li>
-                    {{-- <li class="nav-item"> <a class="nav-link" href="">Service List</a></li> --}}
+                    <li class="nav-item"> <a class="nav-link" href="">Service List</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="">Service List</a></li>
                 </ul>
             </div>
+        </li> --}}
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('events.index')}}">
+                <span class="menu-title">Manage Event </span>
+                <i class="mdi mdi-calendar-clock menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('gallery.index')}}">
+                <span class="menu-title">Manage Blog </span>
+                <i class="mdi mdi-message-draw menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('gallery.index')}}">
+                <span class="menu-title">Client Review List </span>
+                <i class="mdi mdi-walk menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('gallery.index')}}">
+                <span class="menu-title">Post Gallery</span>
+                <i class="mdi mdi-folder-multiple-image menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('gallery.index')}}">
+                <span class="menu-title">Contact List</span>
+                <i class="mdi mdi-account-card-details menu-icon"></i>
+            </a>
         </li>
         {{-- <li class="nav-item">
             <a class="nav-link" href="{{route('event-register.index')}}">
