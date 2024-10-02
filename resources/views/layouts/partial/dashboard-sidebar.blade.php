@@ -42,7 +42,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('gallery.index')}}">
+            <a class="nav-link" href="{{route('blogs.index')}}">
                 <span class="menu-title">Manage Blog </span>
                 <i class="mdi mdi-message-draw menu-icon"></i>
             </a>
@@ -60,7 +60,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('gallery.index')}}">
+            <a class="nav-link" href="{{route('contact-us.index')}}">
                 <span class="menu-title">Contact List</span>
                 <i class="mdi mdi-account-card-details menu-icon"></i>
             </a>

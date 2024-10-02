@@ -38,6 +38,7 @@ Route::get('/page-gallery-photo', [HomeController::class, 'galleryPhoto'])->name
 Route::get('/page-gallery-video', [HomeController::class, 'galleryVideo'])->name('page.gallery-video');
 Route::get('/page-activities', [HomeController::class, 'activities'])->name('page.activities');
 Route::get('/page-news', [HomeController::class, 'news'])->name('page.news');
+Route::get('/page-news/{id}/details', [HomeController::class, 'newsDetails'])->name('page.news-details');
 Route::get('/page-contact', [HomeController::class, 'contact'])->name('page.contact');
 
 
@@ -106,14 +107,11 @@ Route::middleware('auth')->group(function () {
     Route::get('dashboard-gallery/{id}/show',[GalleryController::class,'bvGalleryImage'])->name('dashboard-gallery.images');
     
     //-- BLOG
-    Route::get('blog-news/index', [BlogController::class,'index'])->name('blog.index');
-    Route::get('blog-news/create', [BlogController::class,'create'])->name('blog.create');
-    Route::post('blog-news/store', [BlogController::class,'store'])->name('blog.store');
-    Route::patch('blog-news/edit', [BlogController::class,'edit'])->name('blog.edit');
-    Route::delete('blog-news/delete', [BlogController::class,'delete'])->name('blog.delete');
-    
+    Route::resource('blogs', BlogController::class);
+
     //-- CONTACT
     Route::get('contact-us/index', [ContactController::class,'contactIndex'])->name('contact-us.index');
+    Route::post('contact-us/store', [ContactController::class,'contactStore'])->name('contact-us.store');
     Route::get('contact-us/{id}/reply', [ContactController::class,'contactReply'])->name('contact-us.reply');
     Route::get('contact-us/{id}/delete', [ContactController::class,'contactDelete'])->name('contact-us.delete');
 

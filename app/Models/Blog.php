@@ -16,6 +16,10 @@ class Blog extends Model
         'description',
         'source_url',
         'user_id',
-        'status',
+        'status'
     ];
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

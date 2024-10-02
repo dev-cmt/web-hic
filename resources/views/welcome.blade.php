@@ -18,26 +18,47 @@
 							<p class="mt-0 pb-10">Get in touch and discover how we can help. We aim to be in touch for a consultation </p>
 						</div>
 						<div class="appointment-form-section">
-							<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+							<form action="{{route('contact-us.store')}}" method="post" enctype="multipart/form-data" class="form"> 
+								@csrf
 								<div class="row">
 									<div class="col-lg-12">
 										<div class="form_box mb-30">
-											<input type="text" name="name"  placeholder="Name">
+											<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" @guest value="{{ old('name')}}" @endguest @auth value="{{Auth::user()->name}}" @endauth  placeholder="Your Name">
+											@error('name')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+											@enderror
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="form_box mb-30">
-											<input type="email" name="email" placeholder="Email Address">
+											<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" @guest value="{{old('email')}}" @endguest @auth value="{{Auth::user()->email}}" @endauth placeholder="Your Email">
+											@error('email')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+											@enderror
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="form_box mb-30">
-											<input type="number" name="number" placeholder="Mobile Number">
+											<input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{old('phone')}}" placeholder="Phone">
+											@error('phone')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+											@enderror
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="form_box mb-30">
-											<textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+											<textarea class="form-control py-3 @error('description') is-invalid @enderror" name="description" value="{{old('description')}}" rows="5" placeholder="Message"></textarea>
+											@error('description')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+											@enderror
 										</div>
 										<div class="quote_btn text_center">
 											<button class="btn" type="submit">Send Message</button>
@@ -940,183 +961,33 @@ Event by H & I Council</p>
 				<span class="section-head-bar-2"></span>
 			</div>
 			<div class="owl-carousel blog-carousel">
+				@foreach ($blogs as $item)
 				<div class="blog-single-carousel">
 					<div class="blog-thumb">
 						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg1.jpg" alt="Blog img">
+							<img src="{{asset('public') . '/'. $item->cover_photo}}" alt="Blog img">
 						</a>
 						<div class="blog-meta-top">
 							<ul>
-								<li><a href="#">Graphics</a></li>
-								<li><a href="#">Technology</a></li>
+								{{-- <li><a href="#">Graphics</a></li>
+								<li><a href="#">Technology</a></li> --}}
 							</ul>
 						</div>
 					</div>
 					<div class="blog-content">
 						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
+							<span><a href="#">HIC</a></span> - <span>{{ date('j F Y', strtotime($item->publish)) }}</span>
 						</div>
-						<h5><a href="single-blog.html">Plan Your Project with Your Software</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
+						<h5 class="truncate-2-lines"><a href="{{route('page.news-details', $item->id)}}">{{$item->title}}</a></h5>
+						<p class="truncate-3-lines">{{$item->description}}</p>
 						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
+							<a href="{{route('page.news-details', $item->id)}}">
+								Read More <i class="fas fa-angle-right"></i>
 							</a>
 						</div>
 					</div>
 				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg2.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Tips</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">You have a Great Business Idea?</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg3.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Development</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">How to Make Website WCAG Compliant?</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg4.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Design</a></li>
-								<li><a href="#">Technology</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">The Future of Enterprise API Development</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg5.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Graphics</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">How To Make Your iOS 13 Compatible?</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg6.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Tips</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">The Next Big Challenge for Content Marketer</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="blog-single-carousel">
-					<div class="blog-thumb">
-						<a href="#">
-							<img src="{{asset('public/frontend')}}/images/blog/bg1.jpg" alt="Blog img">
-						</a>
-						<div class="blog-meta-top">
-							<ul>
-								<li><a href="#">Design</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="blog-content">
-						<div class="blog-meta">
-							<span><a href="#">Itsoft</a></span> - <span>January 01, 2024</span>
-						</div>
-						<h5><a href="single-blog.html">Tackling the Changes of Retail Industry</a></h5>
-						<p>Meh synth Schlitz, tempor duis single-origin coffee ea next level ethnic fingerstache. </p>
-						<div class="blog-learn-more">
-							<a href="single-blog.html">
-								Read More
-								<i class="fas fa-angle-right"></i>
-							</a>
-						</div>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>
@@ -1150,5 +1021,15 @@ Event by H & I Council</p>
 			</div>
 		</div>
 	</div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	@if (session()->has('success'))
+		<script>
+			Swal.fire({
+				icon: 'success',
+				title: 'Success!',
+				text: '{{ session('success') }}',
+			});
+		</script>
+	@endif
+
 </x-frontend-layout>

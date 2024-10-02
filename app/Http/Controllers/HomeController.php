@@ -6,14 +6,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use App\Models\Blog;
 use App\Models\User;
 
 class HomeController extends Controller
 {
     public function welcome(Request $request): View
     {
-        $user = Auth::user();
-        return view('welcome', compact('user'));
+        $blogs = Blog::where('status', 1)->latest()->take(12)->get();
+        return view('welcome', compact('blogs'));
     }
     public function about(Request $request): View
     {
@@ -118,8 +119,13 @@ class HomeController extends Controller
     }
     public function news(Request $request): View
     {
-        $user = Auth::user();
-        return view('pages.frontend.news', compact('user'));
+        $data = Blog::where('status', 1)->paginate(6);
+        return view('pages.frontend.news', compact('data'));
+    }
+    public function newsDetails($id): View
+    {
+        $data = Blog::find($id);
+        return view('pages.frontend.news-details', compact('data'));
     }
     public function contact(Request $request): View
     {

@@ -17,20 +17,20 @@ class ContactController extends Controller
     public function contactIndex()
     {
         $message=Contact::get();
-        return view('layouts.pages.contact',compact('message'));
+        return view('pages.backend.contact',compact('message'));
     }
     public function contactStore(Request $request)
     {
         $validated=$request -> validate([
             'name'=> 'required',
             'email'=> 'required',
-            'subject'=> 'required',
+            'phone'=> 'required',
         ]);
 
         $post =new Contact([
             "name" =>$request->name,
             "email"=>$request->email,
-            "subject"=>$request->subject,
+            "phone"=>$request->phone,
             "description"=>$request->description,
         ]);
         $post->save();
