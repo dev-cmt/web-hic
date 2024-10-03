@@ -51,6 +51,8 @@
 
 	<!-- modernizr js -->
 	<script type="text/javascript" src="{{asset('public/frontend')}}/js/vendor/modernizr-3.5.0.min.js"></script>
+
+	@stack('style')
 </head>
 <body>
 	<!-- Loder Start -->
@@ -124,5 +126,8 @@
 	<!-- theme js -->
 	<script type="text/javascript" src="{{asset('public/frontend')}}/js/theme.js"></script>
 	<!-- jquery js -->
+
+	
+	@stack('scripts')
 </body>
 </html>

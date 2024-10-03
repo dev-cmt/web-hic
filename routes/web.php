@@ -10,6 +10,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ClientReviewController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +36,7 @@ Route::get('/', [HomeController::class, 'welcome'])->name('home');
 Route::get('/page-about', [HomeController::class, 'about'])->name('page.about');
 Route::get('/page-message', [HomeController::class, 'message'])->name('page.message');
 Route::get('/page-gallery-photo', [HomeController::class, 'galleryPhoto'])->name('page.gallery-photo');
+Route::get('/page-gallery-photo/{id}/details', [HomeController::class, 'galleryPhotoDetails'])->name('page.gallery-photo-details');
 Route::get('/page-gallery-video', [HomeController::class, 'galleryVideo'])->name('page.gallery-video');
 Route::get('/page-activities', [HomeController::class, 'activities'])->name('page.activities');
 Route::get('/page-news', [HomeController::class, 'news'])->name('page.news');
@@ -114,6 +116,9 @@ Route::middleware('auth')->group(function () {
     Route::post('contact-us/store', [ContactController::class,'contactStore'])->name('contact-us.store');
     Route::get('contact-us/{id}/reply', [ContactController::class,'contactReply'])->name('contact-us.reply');
     Route::get('contact-us/{id}/delete', [ContactController::class,'contactDelete'])->name('contact-us.delete');
+
+    //-- CLIEND REVIEW
+    Route::resource('client_reviews', ClientReviewController::class);
 
 });
 

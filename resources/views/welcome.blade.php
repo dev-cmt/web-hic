@@ -891,68 +891,34 @@ Event by H & I Council</p>
 	<!--==================================================-->
 	<!----START Testimon Section ----->
 	<!--===================================================-->
+	@if (count($clientReview))
 	<div class="testimonial-section">
 		<div class="container">
 			<div class="owl-carousel testimonial-carousel">
+				@foreach ($clientReview as $item)
 				<div class="testimonial-single-item">
 					<div class="testimonial-thumb">
-						<img src="{{asset('public/frontend')}}/images/testimonial/tstm1.jpg" alt="testimonial Img">
+						<img src="{{asset('public/'. $item->img_path)}}" width="80" alt="testimonial Img">
 						<div class="testimonial-icon">
 							<span><i class="fas fa-quote-left"></i></span>
 						</div>
 					</div>
 					<div class="testimonial-content">
-						<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-						<h4>John Abraham</h4>
-						<p class="testimonial-designation">Web developer</p>
+						<p class="testimonial-content-text">{{$item->description}}</p>
+						<h4>{{$item->name}}</h4>
+						<p class="testimonial-designation">{{$item->designation}}</p>
 					</div>
 				</div>
-				<div class="testimonial-single-item">
-					<div class="testimonial-thumb">
-						<img src="{{asset('public/frontend')}}/images/testimonial/tstm2.jpg" alt="testimonial Img">
-						<div class="testimonial-icon">
-							<span><i class="fas fa-quote-left"></i></span>
-						</div>
-					</div>
-					<div class="testimonial-content">
-						<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-						<h4>Ellen Erye </h4>
-						<p class="testimonial-designation">Project Manager</p>
-					</div>
-				</div>
-				<div class="testimonial-single-item">
-					<div class="testimonial-thumb">
-						<img src="{{asset('public/frontend')}}/images/testimonial/tstm3.jpg" alt="testimonial Img">
-						<div class="testimonial-icon">
-							<span><i class="fas fa-quote-left"></i></span>
-						</div>
-					</div>
-					<div class="testimonial-content">
-						<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-						<h4>Shene Watsan </h4>
-						<p class="testimonial-designation">Founder</p>
-					</div>
-				</div>
-				<div class="testimonial-single-item">
-					<div class="testimonial-thumb">
-						<img src="{{asset('public/frontend')}}/images/testimonial/tstm2.jpg" alt="testimonial Img">
-						<div class="testimonial-icon">
-							<span><i class="fas fa-quote-left"></i></span>
-						</div>
-					</div>
-					<div class="testimonial-content">
-						<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-						<h4>Monalysha</h4>
-						<p class="testimonial-designation">CEO</p>
-					</div>
-				</div>
+				@endforeach
 			</div>
 		</div>
 	</div>
+	@endif
 
 	<!--==================================================-->
 	<!----START BLOG  Section ----->
 	<!--===================================================-->
+	@if (count($blogs))
 	<div class="blog-section pt-70 pb-70">
 		<div class="container">
 			<div class="section-head text-center mb-85">
@@ -991,6 +957,7 @@ Event by H & I Council</p>
 			</div>
 		</div>
 	</div>
+	@endif
 
 	<!--==================================================-->
 	<!-----STSRT SUSCRIBE  Section ----->

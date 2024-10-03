@@ -21,7 +21,7 @@ class Gallery extends Model
         'user_id',
     ];
 
-    public function images(){
+    public function galleryImages(){
         return $this->hasMany(GalleryImages::class);
     }
     public function user()

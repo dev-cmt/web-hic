@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use App\Models\Blog;
+use App\Models\Gallery;
+use App\Models\ClientReview;
 use App\Models\User;
 
 class HomeController extends Controller
@@ -14,7 +16,8 @@ class HomeController extends Controller
     public function welcome(Request $request): View
     {
         $blogs = Blog::where('status', 1)->latest()->take(12)->get();
-        return view('welcome', compact('blogs'));
+        $clientReview = ClientReview::where('status', 1)->latest()->take(20)->get();
+        return view('welcome', compact('blogs', 'clientReview'));
     }
     public function about(Request $request): View
     {
@@ -104,8 +107,13 @@ class HomeController extends Controller
     
     public function galleryPhoto(Request $request): View
     {
-        $user = Auth::user();
-        return view('pages.frontend.gallery-photo', compact('user'));
+        $data = Gallery::where('public','=','1')->orderBy('created_at', 'desc')->with('user')->get();
+        return view('pages.frontend.gallery-photo', compact('data'));
+    }
+    public function galleryPhotoDetails($id): View
+    {
+        $data = Gallery::findOrFail($id);
+        return view('pages.frontend.gallery-photo-details', compact('data'));
     }
     public function galleryVideo(Request $request): View
     {

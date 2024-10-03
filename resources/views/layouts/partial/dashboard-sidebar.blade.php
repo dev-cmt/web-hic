@@ -48,7 +48,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('gallery.index')}}">
+            <a class="nav-link" href="{{route('client_reviews.index')}}">
                 <span class="menu-title">Client Review List </span>
                 <i class="mdi mdi-walk menu-icon"></i>
             </a>
