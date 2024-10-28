@@ -21,15 +21,15 @@
 @endif
 
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function () {
         // Show the modal when the page loads (Bootstrap 4 version)
         $('#sg-modal-add').modal('show');
     });
-</script>
+</script> -->
 
 
-<!-- <script>
+<script>
     document.addEventListener("DOMContentLoaded", function () {
         // Check if the modal has been shown before using sessionStorage
         if (!sessionStorage.getItem('modalShown')) {
@@ -52,4 +52,4 @@
             }
         });
     });
-</script> -->
+</script>

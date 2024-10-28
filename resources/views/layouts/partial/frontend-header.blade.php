@@ -22,7 +22,7 @@
 								<div class="header-top-left-icon">
 									<span>
 										<i class="fas fa-phone"></i>
-										Dhaka Office: +8801818042291
+										Dhaka Office: +880 1818042291
 									</span>
 								</div>
 							</a>
@@ -32,7 +32,7 @@
 								<div class="header-top-left-icon">
 									<span>
 										<i class="fas fa-phone"></i>
-										Chattogram Office: +8801711781451
+										Chattogram Office: +880 1711781451
 									</span>
 								</div>
 							</a>
@@ -48,21 +48,21 @@
 										<i class="fab fa-facebook-f"></i>
 									</a>
 								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-twitter"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-instagram"></i>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<i class="fab fa-dribbble"></i>
-									</a>
-								</li>
+								<!--<li>-->
+								<!--	<a href="#">-->
+								<!--		<i class="fab fa-twitter"></i>-->
+								<!--	</a>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--	<a href="#">-->
+								<!--		<i class="fab fa-instagram"></i>-->
+								<!--	</a>-->
+								<!--</li>-->
+								<!--<li>-->
+								<!--	<a href="#">-->
+								<!--		<i class="fab fa-dribbble"></i>-->
+								<!--	</a>-->
+								<!--</li>-->
 							</ul>
 						</div>
 					</div>
@@ -78,7 +78,7 @@
 			<div class="row">
 				<div class="col-md-3">
 					<div class="logo"> 
-						<a href="index.html">
+						<a href="https://hic.com.bd">
 							<img style="max-width:60%;height:auto;box-sizing:border-box;margin-top:-15px;" src="{{asset('public/frontend')}}/images/logo.png" alt="logo">
 							<img style="max-width:60%;height:auto;box-sizing:border-box;margin-top:-15px;" src="{{asset('public/frontend')}}/images/footer/logo.png" alt="logo">
 						</a>
@@ -112,8 +112,8 @@
 									<li><a href="{{ route('page.canada') }}">Canada</a></li>
 									<li><a href="{{ route('page.australia') }}">Australia</a></li>
 									<li><a href="{{ route('page.germany') }}">Germany</a></li>
-									<li><a href="{{ route('page.dubai') }}">Dubai</a></li>
-									<li><a href="{{ route('page.malta') }}">Malta</a></li>
+									<!--<li><a href="{{ route('page.dubai') }}">Dubai</a></li>-->
+									<!--<li><a href="{{ route('page.malta') }}">Malta</a></li>-->
 									<li><a href="{{ route('page.new_zealand') }}">New Zealand</a></li>
 									<li><a href="{{ route('page.usa') }}">USA</a></li>
 
@@ -147,28 +147,28 @@
                     <li>
                         <a href="#">Services</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Counseling Services</a></li>
-                            <li><a href="#">Authorized IELTS/TOEFL Registration Agent</a></li>
-                            <li><a href="#">Admission Services</a></li>
-                            <li><a href="#">Visa Processing</a></li>
-                            <li><a href="#">Accommodation Support</a></li>
-                            <li><a href="#">Pre-Departure Briefing</a></li>
-                            <li><a href="#">Airport Pickup</a></li>
+                           <li><a href="{{ route('page.counseling') }}">Counseling Services</a></li>
+									<li><a href="{{ route('page.ielts_toefl') }}">Registration Agent</a></li>
+									<li><a href="{{ route('page.admission_services') }}">Admission Services</a></li>
+									<li><a href="{{ route('page.visa_processing') }}">Visa Processing</a></li>
+									<li><a href="{{ route('page.accommodation_support') }}">Accommodation Support</a></li>
+									<li><a href="{{ route('page.pre_departure_briefing') }}">Pre-Departure Briefing</a></li>
+									<li><a href="{{ route('page.airport_pickup') }}">Airport Pickup</a></li>
                         </ul>
                     </li>
 
                     <li>
                         <a href="#">Study Abroad</a>
                         <ul class="sub-menu">
-                            <li><a href="#">UK</a></li>
-                            <li><a href="#">Malaysia</a></li>
-                            <li><a href="#">Canada</a></li>
-                            <li><a href="#">Australia</a></li>
-                            <li><a href="#">Germany</a></li>
-                            <li><a href="#">Dubai</a></li>
-                            <li><a href="#">Malta</a></li>
-                            <li><a href="#">New Zealand</a></li>
-                            <li><a href="#">USA</a></li>
+                           <li><a href="{{ route('page.uk') }}">UK</a></li>
+									<li><a href="{{ route('page.malaysia') }}">Malaysia</a></li>
+									<li><a href="{{ route('page.canada') }}">Canada</a></li>
+									<li><a href="{{ route('page.australia') }}">Australia</a></li>
+									<li><a href="{{ route('page.germany') }}">Germany</a></li>
+									<!--<li><a href="{{ route('page.dubai') }}">Dubai</a></li>-->
+									<!--<li><a href="{{ route('page.malta') }}">Malta</a></li>-->
+									<li><a href="{{ route('page.new_zealand') }}">New Zealand</a></li>
+									<li><a href="{{ route('page.usa') }}">USA</a></li>
                         </ul>
                     </li>
                     <li>

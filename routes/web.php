@@ -42,6 +42,7 @@ Route::get('/page-activities', [HomeController::class, 'activities'])->name('pag
 Route::get('/page-news', [HomeController::class, 'news'])->name('page.news');
 Route::get('/page-news/{id}/details', [HomeController::class, 'newsDetails'])->name('page.news-details');
 Route::get('/page-contact', [HomeController::class, 'contact'])->name('page.contact');
+Route::post('contact-us/store', [ContactController::class,'contactStore'])->name('contact-us.store');
 
 
 Route::get('/counseling', [HomeController::class, 'counselingService'])->name('page.counseling');
@@ -113,7 +114,6 @@ Route::middleware('auth')->group(function () {
 
     //-- CONTACT
     Route::get('contact-us/index', [ContactController::class,'contactIndex'])->name('contact-us.index');
-    Route::post('contact-us/store', [ContactController::class,'contactStore'])->name('contact-us.store');
     Route::get('contact-us/{id}/reply', [ContactController::class,'contactReply'])->name('contact-us.reply');
     Route::get('contact-us/{id}/delete', [ContactController::class,'contactDelete'])->name('contact-us.delete');
 

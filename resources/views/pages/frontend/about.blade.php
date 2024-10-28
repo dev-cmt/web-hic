@@ -24,7 +24,7 @@
 								<ul class="tabs-btn-list">
 									<li><a href="#mission">Our Mission</a></li>
 									<li><a href="#vision">Our Vision</a></li>
-									<li><a href="#award">Award Win</a></li>
+									<li><a href="#award">Download Brochure 2023</a></li>
 								</ul>
 							</div>
 							<div id="mission">
@@ -48,29 +48,12 @@
 							<div id="award">
 								<div class="tabs-content-area">
 									<div class="row">
+									
 										<div class="col-md-6">
 											<div class="award-single-items-inner">
 												<div class="award-thumb">
-													<img src="{{asset('public/frontend')}}/images/tabs/c1.jpg" alt="Award">
-												</div>
-												<div class="award-content">
-													<div class="award-single-title">
-														<h5>Training Companies 2016 </h5>
-													</div>
-													<p>More than 40 years ago, our company’s namesake</p>
-												</div>
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="award-single-items-inner">
-												<div class="award-thumb">
-													<img src="{{asset('public/frontend')}}/images/tabs/c2.jpg" alt="Award">
-												</div>
-												<div class="award-content">
-													<div class="award-single-title">
-														<h5>Sales Training Companies 2015 </h5>
-													</div>
-													<p>More than 40 years ago, our company’s namesake</p>
+													<img src="{{asset('public/frontend')}}/images/download/download.jpg" alt="Download">
+													  <!--<a href="download/H & I Council Brochure 2023.pdf" class="btn btn-large pull-right"><i class="icon-download-alt"> </i> Download Brochure </a>-->
 												</div>
 											</div>
 										</div>
@@ -83,77 +66,267 @@
 			</div>
 		</div>
 	</div>
-
+<br>
+<br>
     <!--==================================================-->
 	<!----START Testimonial  Section ----->
 	<!--===================================================-->
-	<div class="testimonial-section style-3 pt-200 pb-45 ">
+	<div class="testimonial-section style-3 pt-40 pb-45 ">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="section-head text-center pb-55">
-						<h5>// Client Testimonial</h5>
-						<h3>What Says Our Most Of</h3>
-						<h2>Happy <span>Clients</span></h2>
+						<h3>Certification</h3>
 						<span class="section-head-bar-2"></span>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="owl-carousel testimonial-carousel">
-					<div class="testimonial-single-item">
-						<div class="testimonial-thumb">
-							<img src="{{asset('public/frontend')}}/images/testimonial/tstm1.jpg" alt="testimonial Img">
-							<div class="testimonial-icon">
-								<span><i class="fas fa-quote-left"></i></span>
+				<div class="row">
+				    <!--Item -->
+					<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_01.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								 <!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
 							</div>
 						</div>
-						<div class="testimonial-content">
-							<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-							<h4>John Abraham</h4>
-							<p class="testimonial-designation">Web developer</p>
-						</div>
 					</div>
-					<div class="testimonial-single-item">
-						<div class="testimonial-thumb">
-							<img src="{{asset('public/frontend')}}/images/testimonial/tstm2.jpg" alt="testimonial Img">
-							<div class="testimonial-icon">
-								<span><i class="fas fa-quote-left"></i></span>
+					
+					<!--Item -->
+					<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_02.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
 							</div>
 						</div>
-						<div class="testimonial-content">
-							<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-							<h4>Ellen Erye </h4>
-							<p class="testimonial-designation">Project Manager</p>
-						</div>
 					</div>
-					<div class="testimonial-single-item">
-						<div class="testimonial-thumb">
-							<img src="{{asset('public/frontend')}}/images/testimonial/tstm3.jpg" alt="testimonial Img">
-							<div class="testimonial-icon">
-								<span><i class="fas fa-quote-left"></i></span>
+					
+					<!--Item -->
+					<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_03.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
 							</div>
 						</div>
-						<div class="testimonial-content">
-							<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-							<h4>Shene Watsan </h4>
-							<p class="testimonial-designation">Founder</p>
-						</div>
 					</div>
-					<div class="testimonial-single-item">
-						<div class="testimonial-thumb">
-							<img src="{{asset('public/frontend')}}/images/testimonial/tstm2.jpg" alt="testimonial Img">
-							<div class="testimonial-icon">
-								<span><i class="fas fa-quote-left"></i></span>
+					
+					<!--Item -->
+					<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_04.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
 							</div>
 						</div>
-						<div class="testimonial-content">
-							<p class="testimonial-content-text">Sorem ipsum dolor sit amet there any consectetur adipisicing eliter sed do the eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim.</p>
-							<h4>Monalysha</h4>
-							<p class="testimonial-designation">CEO</p>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_05.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
 						</div>
 					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_06.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_07.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_08.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_09.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_10.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_11.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_12.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_13.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_14.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_15.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_16.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+					
+						<div class="col-md-4">
+						<div class="award-single-items-inner">
+							<div class="award-thumb">
+								<img src="{{asset('public/frontend')}}/images/certification/cer_17.jpg" alt="Award">
+							</div>
+							<div class="award-content">
+								<!--<div class="award-single-title">
+									<h5>Training Companies 2016 </h5>
+								</div>
+								<p>More than 40 years ago, our company’s namesake</p>-->
+							</div>
+						</div>
+					</div>
+				
 				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -53,6 +53,16 @@
 									</div>
 									<div class="col-lg-12">
 										<div class="form_box mb-30">
+											<input type="text" class="form-control @error('last_qualification') is-invalid @enderror" name="last_qualification" value="{{old('last_qualification')}}" placeholder="Last Qualification">
+											@error('last_qualification')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+											@enderror
+										</div>
+									</div>
+									<div class="col-lg-12">
+										<div class="form_box mb-30">
 											<textarea class="form-control py-3 @error('description') is-invalid @enderror" name="description" value="{{old('description')}}" rows="5" placeholder="Message"></textarea>
 											@error('description')
 											<span class="invalid-feedback" role="alert">
@@ -363,20 +373,20 @@
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-mail"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/uk.jpg" alt="UK">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in UK</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="#">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.uk') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-mail"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/uk.jpg" alt="UK">
 									</div>
 									<div class="services-bottom-title">
 										<h6>UK</h6>
@@ -385,27 +395,27 @@
 							</div>
 						</div>
 					</div>
-						<div class="col-sm-12 col-md-6 col-lg-4">
+					<div class="col-sm-12 col-md-6 col-lg-4">
 						<div class="services-single-item pb-30">
 							<div class="services-thumb">
 								<img src="{{asset('public/frontend')}}/images/study/new.jpg" alt="Services">
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/new.jpg" alt="New">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in New Zealand</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.new_zealand') }}">Read More <i class="fas fa-angle-right"></i></a> 
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/new.jpg" alt="New">
 									</div>
 									<div class="services-bottom-title">
 										<h6>New Zealand</h6>
@@ -414,27 +424,27 @@
 							</div>
 						</div>
 					</div>
-						<div class="col-sm-12 col-md-6 col-lg-4">
+					<div class="col-sm-12 col-md-6 col-lg-4">
 						<div class="services-single-item pb-30">
 							<div class="services-thumb">
 								<img src="{{asset('public/frontend')}}/images/study/usa.jpg" alt="Services">
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/usa.jpg" alt="USA">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in USA</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.usa') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/usa.jpg" alt="USA">
 									</div>
 									<div class="services-bottom-title">
 										<h6>USA</h6>
@@ -443,35 +453,35 @@
 							</div>
 						</div>
 					</div>
-						<div class="col-sm-12 col-md-6 col-lg-4">
-						<div class="services-single-item pb-30">
-							<div class="services-thumb">
-								<img src="{{asset('public/frontend')}}/images/study/dubai.jpg" alt="Services">
-								<div class="services-overlay">
-									<div class="overlay-content-inner">
-										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
-										</div>
-										<div class="overlay-title">
-											<h6>Study in Dubai</h6>
-										</div>
-										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
-										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="services-bottom-content align-items-center d-flex">
-									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
-									</div>
-									<div class="services-bottom-title">
-										<h6>Dubai</h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+					<!--	<div class="services-single-item pb-30">-->
+					<!--		<div class="services-thumb">-->
+					<!--			<img src="{{asset('public/frontend')}}/images/study/dubai.jpg" alt="Services">-->
+					<!--			<div class="services-overlay">-->
+					<!--				<div class="overlay-content-inner">-->
+					<!--					<div class="overlay-icon">-->
+					<!--						<img src="{{asset('public/frontend')}}/images/flag/dubai.jpg" alt="Dubai">-->
+					<!--					</div>-->
+					<!--					<div class="overlay-title">-->
+					<!--						<h6>Study in Dubai</h6>-->
+					<!--					</div>-->
+					<!--					<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>-->
+					<!--					<div class="btn-common services-overlay-btn">-->
+					<!--						<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>-->
+					<!--					</div>-->
+					<!--				</div>-->
+					<!--			</div>-->
+					<!--			<div class="services-bottom-content align-items-center d-flex">-->
+					<!--				<div class="services-bottom-icon">-->
+					<!--					<img src="{{asset('public/frontend')}}/images/flag/dubai.jpg" alt="Dubai">-->
+					<!--				</div>-->
+					<!--				<div class="services-bottom-title">-->
+					<!--					<h6>Dubai</h6>-->
+					<!--				</div>-->
+					<!--			</div>-->
+					<!--		</div>-->
+					<!--	</div>-->
+					<!--</div>-->
 					<div class="col-sm-12 col-md-6 col-lg-4">
 						<div class="services-single-item pb-30">
 							<div class="services-thumb">
@@ -479,20 +489,20 @@
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-content"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/malaysia.jpg" alt="Malaysia">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in Malaysia</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="#">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.malaysia') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-content"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/malaysia.jpg" alt="Malaysia">
 									</div>
 									<div class="services-bottom-title">
 										<h6>Malaysia</h6>
@@ -501,27 +511,27 @@
 							</div>
 						</div>
 					</div>
-			<div class="col-sm-12 col-md-6 col-lg-4">
+			        <div class="col-sm-12 col-md-6 col-lg-4">
 						<div class="services-single-item pb-30">
 							<div class="services-thumb">
 								<img src="{{asset('public/frontend')}}/images/study/canada.jpg" alt="Services">
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/canada.jpg" alt="Canada">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in Canada</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.canada') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/canada.jpg" alt="Canada">
 									</div>
 									<div class="services-bottom-title">
 										<h6>Canada</h6>
@@ -537,20 +547,20 @@
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/australia.jpg" alt="Australia">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in Australia</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.australia') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/australia.jpg" alt="Australia">
 									</div>
 									<div class="services-bottom-title">
 										<h6>Australia</h6>
@@ -559,35 +569,35 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-sm-12 col-md-6 col-lg-4">
-						<div class="services-single-item pb-30">
-							<div class="services-thumb">
-								<img src="{{asset('public/frontend')}}/images/study/malta.jpg" alt="Services">
-								<div class="services-overlay">
-									<div class="overlay-content-inner">
-										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
-										</div>
-										<div class="overlay-title">
-											<h6>Study in Malta</h6>
-										</div>
-										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
-										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
-										</div>
-									</div>
-								</div>
-								<div class="services-bottom-content align-items-center d-flex">
-									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
-									</div>
-									<div class="services-bottom-title">
-										<h6>Malta</h6>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					<!--<div class="col-sm-12 col-md-6 col-lg-4">-->
+					<!--	<div class="services-single-item pb-30">-->
+					<!--		<div class="services-thumb">-->
+					<!--			<img src="{{asset('public/frontend')}}/images/study/malta.jpg" alt="Services">-->
+					<!--			<div class="services-overlay">-->
+					<!--				<div class="overlay-content-inner">-->
+					<!--					<div class="overlay-icon">-->
+					<!--						<img src="{{asset('public/frontend')}}/images/flag/malta.jpg" alt="Malta">-->
+					<!--					</div>-->
+					<!--					<div class="overlay-title">-->
+					<!--						<h6>Study in Malta</h6>-->
+					<!--					</div>-->
+					<!--					<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>-->
+					<!--					<div class="btn-common services-overlay-btn">-->
+					<!--						<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>-->
+					<!--					</div>-->
+					<!--				</div>-->
+					<!--			</div>-->
+					<!--			<div class="services-bottom-content align-items-center d-flex">-->
+					<!--				<div class="services-bottom-icon">-->
+					<!--					<img src="{{asset('public/frontend')}}/images/flag/malta.jpg" alt="Malta">-->
+					<!--				</div>-->
+					<!--				<div class="services-bottom-title">-->
+					<!--					<h6>Malta</h6>-->
+					<!--				</div>-->
+					<!--			</div>-->
+					<!--		</div>-->
+					<!--	</div>-->
+					<!--</div>-->
 					<div class="col-sm-12 col-md-6 col-lg-4">
 						<div class="services-single-item pb-30">
 							<div class="services-thumb">
@@ -595,20 +605,20 @@
 								<div class="services-overlay">
 									<div class="overlay-content-inner">
 										<div class="overlay-icon">
-											<i class="flaticon-briefcase"></i>
+											<img src="{{asset('public/frontend')}}/images/flag/germany.jpg" alt="Garmany">
 										</div>
 										<div class="overlay-title">
 											<h6>Study in Germany</h6>
 										</div>
 										<p>Nullam tincidunt augue eget densis volu tpat, vitae ultri ces lectus and posuere. Duis urna lacus.</p>
 										<div class="btn-common services-overlay-btn">
-											<a href="single-study.html">Read More <i class="fas fa-angle-right"></i></a>
+											<a href="{{ route('page.germany') }}">Read More <i class="fas fa-angle-right"></i></a>
 										</div>
 									</div>
 								</div>
 								<div class="services-bottom-content align-items-center d-flex">
 									<div class="services-bottom-icon">
-										<i class="flaticon-briefcase"></i>
+										<img src="{{asset('public/frontend')}}/images/flag/germany.jpg" alt="Garmany">
 									</div>
 									<div class="services-bottom-title">
 										<h6>Germany</h6>
@@ -875,15 +885,15 @@ Event by H & I Council</p>
 		<div class="container">
 			<div class="call-do-action-video text-center mb-35">
 				<div class="video-icon video-icon-cda">
-					<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/BS4TUd7FJSg"><i class="fas fa-play-circle"></i></a>
+					<a class="video-vemo-icon venobox vbox-item" data-vbtype="youtube" data-autoplay="true" href="https://youtu.be/zVx_dccbI60"><i class="fas fa-play-circle"></i></a>
 				</div>
 			</div>
 			<div class="call-do-action-content text-center">
-				<h2 class="text-white">We Deliver Solution With The Goal Of <br><span class="sub-title"> A Trusting Relationships</span></h2>
-				<p class="text-white">Appropriate for your specific business, making it easy for you to have quality IT services.</p>
-				<div class="btn-common btn-cda mt-40">
-					<a href="#">Watch More</a>
-				</div>
+				<h2 class="text-white">Our students trust us for providing seamless study abroad experiences and top-quality education services tailored to their needs.</span></h2>
+				<p class="text-white">Appropriate for your study abroad, making it easy for you to have quality edcucation services..</p>
+				<!--<div class="btn-common btn-cda mt-40">-->
+				<!--	<a href="#">Watch More</a>-->
+				<!--</div>-->
 			</div>
 		</div>
 	</div>
@@ -962,32 +972,32 @@ Event by H & I Council</p>
 	<!--==================================================-->
 	<!-----STSRT SUSCRIBE  Section ----->
 	<!--===================================================-->
-	<div class="subscribe-section">
-		<div class="container">
-			<div class="row footer-hr">
-				<div class="col-md-6">
-					<div class="subscribe-section-content d-flex">
-						<div class="subscribe-section-icon">
-							<i class="flaticon-time"></i>
-						</div>
-						<div class="subscribe-section-title">
-							<h5>Sign up to get latest updates</h5>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="subscribe-input-field">
-						<form action="https://html.ditsolution.net/itsoft/POST">
-							<div class="subscribe-mail-box">
-								<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your Email...." required>
-								<button class="subscribe-submit-btn" type="submit" name="submit">Subscribe</button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<!--<div class="subscribe-section">-->
+	<!--	<div class="container">-->
+	<!--		<div class="row footer-hr">-->
+	<!--			<div class="col-md-6">-->
+	<!--				<div class="subscribe-section-content d-flex">-->
+	<!--					<div class="subscribe-section-icon">-->
+	<!--						<i class="flaticon-time"></i>-->
+	<!--					</div>-->
+	<!--					<div class="subscribe-section-title">-->
+	<!--						<h5>Sign up to get latest updates</h5>-->
+	<!--					</div>-->
+	<!--				</div>-->
+	<!--			</div>-->
+	<!--			<div class="col-md-6">-->
+	<!--				<div class="subscribe-input-field">-->
+	<!--					<form action="https://html.ditsolution.net/itsoft/POST">-->
+	<!--						<div class="subscribe-mail-box">-->
+	<!--							<input class="subscribe-mail-box" type="email" name="email" placeholder="Enter Your Email...." required>-->
+	<!--							<button class="subscribe-submit-btn" type="submit" name="submit">Subscribe</button>-->
+	<!--						</div>-->
+	<!--					</form>-->
+	<!--				</div>-->
+	<!--			</div>-->
+	<!--		</div>-->
+	<!--	</div>-->
+	<!--</div>-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	@if (session()->has('success'))
 		<script>

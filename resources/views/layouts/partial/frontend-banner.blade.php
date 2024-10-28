@@ -10,7 +10,7 @@
 				<div class="breadcumb-content">
 					<h1>{{ $title }}</h1>
 					<ul>
-						<li><a href="index.html">Home</a></li>
+						<li><a href="https://hic.com.bd">Home</a></li>
 						<li><i class="fa fa-angle-right"></i></li>
 						<li>{{ $title }}</li>
 					</ul>

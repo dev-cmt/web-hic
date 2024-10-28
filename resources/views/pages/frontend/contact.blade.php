@@ -10,32 +10,58 @@
 						<div class="contact_title pb-4">
 							<h3>Get In Touch</h3>
 						</div>
-						<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form" >
+						<form action="{{route('contact-us.store')}}" method="post" enctype="multipart/form-data" class="form"> 
+							@csrf
 							<div class="row">
 								<div class="col-lg-6">
 									<div class="form_box mb-30">
-										<input type="text" name="name"  placeholder="Name">
+										<input type="text" class="form-control @error('name') is-invalid @enderror" name="name" @guest value="{{ old('name')}}" @endguest @auth value="{{Auth::user()->name}}" @endauth  placeholder="Your Name">
+										@error('name')
+											<span class="invalid-feedback" role="alert">
+												<strong>{{ $message }}</strong>
+											</span>
+										@enderror
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="form_box mb-30">
-										<input type="email" name="email" placeholder="Email Address">
+										<input type="email" class="form-control @error('email') is-invalid @enderror" name="email" @guest value="{{old('email')}}" @endguest @auth value="{{Auth::user()->email}}" @endauth placeholder="Your Email">
+										@error('email')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="form_box mb-30">
-										<input type="text" name="phone" placeholder="Phone Number">
+										<input type="number" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{old('phone')}}" placeholder="Phone">
+										@error('phone')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
 									</div>
 								</div>
 								<div class="col-lg-6">
 									<div class="form_box mb-30">
-										<input type="text" name="last" placeholder="Last Qualification">
+										<input type="text" class="form-control @error('last_qualification') is-invalid @enderror" name="last_qualification" value="{{old('last_qualification')}}" placeholder="Last Qualification">
+										@error('last_qualification')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
 									</div>
 								</div>
 								
 								<div class="col-lg-12">
 									<div class="form_box mb-30">
-										<textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+										<textarea class="form-control py-3 @error('description') is-invalid @enderror" name="description" value="{{old('description')}}" cols="30" rows="10" placeholder="Message"></textarea>
+										@error('description')
+										<span class="invalid-feedback" role="alert">
+											<strong>{{ $message }}</strong>
+										</span>
+										@enderror
 									</div>
 									<div class="quote_btn">
 										<button class="btn" type="submit">Send Message</button>
@@ -53,8 +79,9 @@
 								<i class="flaticon-time"></i>
 							</div>
 							<div class="cda-content-inner">
-								<h4>Dhaka Office</h4>
-								<p>Landmark Tower, 5th Floor, 129 Kalabagan, Mirpur Road, Dhaka 120</p>
+							    <h4>H & I Council</h4>
+							    <h4>Dhaka Office</h4>
+								<p>Landmark Tower, 5th Floor, 129 Kalabagan, Mirpur Road, Dhaka 1205</p>
 							</div>
 						</div>
 						<div class="cda-single-content hr d-flex">
@@ -63,7 +90,7 @@
 							</div>
 							<div class="cda-content-inner">
 								<h4>Telephone Number</h4>
-							<p>+880-1715-564-383</p>
+							<p>+880 1715 564 383</p>
 							</div>
 						</div>
 						<div class="cda-single-content hr d-flex">
@@ -80,6 +107,7 @@
 								<i class="flaticon-time"></i>
 							</div>
 							<div class="cda-content-inner">
+							    <h4>H & I Council</h4>
 								<h4>Chattogram Office</h4>
 								<p>Kashem Villa (1st Floor) (Beside Daily Purbukun office)1320 East Nasirabad, CDA Avenue Chittagong- 4000.</p>
 							</div>
@@ -90,7 +118,7 @@
 							</div>
 							<div class="cda-content-inner">
 								<h4>Telephone Number</h4>
-							<p>+880-1711-781-451</p>
+							<p>+880 1711 781 451</p>
 							</div>
 						</div>
 						<div class="cda-single-content hr d-flex">
@@ -112,4 +140,15 @@
 			</div>
 		</div>
 	</div>
+	
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	@if (session()->has('success'))
+		<script>
+			Swal.fire({
+				icon: 'success',
+				title: 'Success!',
+				text: '{{ session('success') }}',
+			});
+		</script>
+	@endif
 </x-frontend-layout>

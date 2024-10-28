@@ -16,15 +16,15 @@
 									<li>
 										<a href="https://www.facebook.com/HandICOUNCIL"><i class="fab fa-facebook-f"></i></a>
 									</li>
-									<li>
-										<a href="#"><i class="fab fa-twitter"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-pinterest"></i></a>
-									</li>
-									<li>
-										<a href="#"><i class="fab fa-linkedin-in"></i></a>
-									</li>
+									<!--<li>-->
+									<!--	<a href="#"><i class="fab fa-twitter"></i></a>-->
+									<!--</li>-->
+									<!--<li>-->
+									<!--	<a href="#"><i class="fab fa-pinterest"></i></a>-->
+									<!--</li>-->
+									<!--<li>-->
+									<!--	<a href="#"><i class="fab fa-linkedin-in"></i></a>-->
+									<!--</li>-->
 								</ul>
 							</div>
 						</div>
@@ -57,7 +57,7 @@
 								<h5>Dhaka Office</h5>
 							</div>
 							<p><b>Adress: </b>Landmark Tower, 5th Floor, 129 Kalabagan, Mirpur Road, Dhaka 1205, Dhaka, Bangladesh</p>
-							<p><b>Phone: </b> +880 1818-042 291</p>
+							<p><b>Phone: </b> +880 1818 042 291</p>
 							<p><b>Email: </b>  hic_bd@yahoo.com<br> Website: hic.com.bd</p>
 						</div>
 					</div>
@@ -69,8 +69,8 @@
 								<h5>Chattogram Office</h5>
 							</div>
 							<p><b>Adress: </b>Kashem Villa (1st Floor) (Beside Daily Purbukun office)1320 East Nasirabad, CDA Avenue Chittagong- 4000.</p>
-							<p><b>Phone: </b> +880-1711-781-451</p>
-							<p><b>Email: </b> chattogram@hic.com.bd<br> Website: hic.com.bd</p>
+							<p><b>Phone: </b> +880 1711 781 451</p>
+							<p><b>Email: </b> hic_bd@yahoo.com<br> Website: hic.com.bd</p>
 						</div>
 					</div>
 				</div>

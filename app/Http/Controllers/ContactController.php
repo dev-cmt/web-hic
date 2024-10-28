@@ -31,6 +31,7 @@ class ContactController extends Controller
             "name" =>$request->name,
             "email"=>$request->email,
             "phone"=>$request->phone,
+            "last_qualification"=>$request->last_qualification,
             "description"=>$request->description,
         ]);
         $post->save();

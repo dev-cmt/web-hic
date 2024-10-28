@@ -5,7 +5,7 @@
 				<div class="col-sm-12 col-md-6">
 					<div class="about-thumb-section">
 						<div class="about-single-thumb">
-							<img src="{{asset('public/frontend')}}/images/about/ab2.png" alt="about-img">
+							<img src="{{asset('public/frontend')}}/images/services/admissionservices.jpg" alt="about-img">
 						</div>
 					</div>
 				</div>

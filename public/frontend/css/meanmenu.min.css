@@ -1,6 +1,6 @@
 a.meanmenu-reveal{display:none}
 .mean-container .mean-bar {
-    background: #FF3C00;
+    background: #0171BB;
     float: left;
     min-height: 60px;
     padding: 4px 0 0;
@@ -134,6 +134,7 @@ a.meanmenu-reveal{display:none}
 .mean-container .mean-bar::before {
     color: #fff;
     content: "H & I Council";
+    background-image: url('/public/frontend/images/mobile_logo.png');
     font-size: 22px;
     font-weight: 700;
     left: 10px;

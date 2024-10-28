@@ -4,6 +4,7 @@
 	<!--===================================================-->
 	<div class="blog-section style-5 bg-2 pt-80 pb-80">
 		<div class="container">
+		    <h2>Get the latest updates, events, and important information for your study abroad journey.</h2>
 			<div class="row">
 				@foreach ($data as $row)
 				<div class="col-sm-12 col-md-6 col-lg-4">
@@ -12,6 +13,7 @@
 							<a href="#">
 								<img src="{{asset('public') . '/'. $row->cover_photo}}" alt="Blog img">
 							</a>
+							
 							<div class="blog-meta-top">
 								<ul>
 									{{-- <li><a href="#">Graphics</a></li>
